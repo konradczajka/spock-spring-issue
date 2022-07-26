@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.2'
+	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+	id 'java'
+	id 'groovy'
+}
+
+group = 'konradczajka'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '18'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.spockframework:spock-core:2.1-groovy-3.0'
+	testImplementation 'org.spockframework:spock-spring:2.1-groovy-3.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
