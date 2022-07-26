@@ -14,10 +14,10 @@ class MainLogicSpec extends Specification {
     @SpringBean
     NumberProvider numberProvider = Stub()
 
-    def multipliesProviderNumberByTwo() {
+    def "multiplies provided number by two"() {
         given:
-            numberProvider.get() >> 4
+        numberProvider.get() >> 4
         expect:
-            mainLogic.doStuff() == 8
+        mainLogic.doubleIt() == 8
     }
 }

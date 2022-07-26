@@ -21,7 +21,7 @@ class MainLogic {
     @Autowired
     private NumberProvider provider;
 
-    int doStuff() {
+    int doubleIt() {
         return provider.get() * 2;
     }
 }
